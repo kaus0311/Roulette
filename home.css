@@ -1,0 +1,57 @@
+body {
+    background-image: url('roulette_login_anim.gif');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 105%, 105%, 105%, 105%;
+  }
+
+  @keyframes animateBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin-top: 100px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .btn:hover {
+    background-color: #45a049;
+  }
+
+  .register-link {
+    text-align: center;
+    margin-top: 20px;
+  }

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      background-image: url('roulette_login_anim.gif');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: 105%, 105%, 105%, 105%;
+    }
+
+    @keyframes animateBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      margin-top: 100px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <h2>Login</h2>
+      <form>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button class="btn" type="submit" a href= "roullette.html">Sign In</button>
+      </form>
+      <div class="register-link">
+        Don't have an account? <a href="signin_page.html">Register</a>
+      </div>
+      <div id="loginStatus"></div>
+    </div>
+  
+    <script>
+      // Get the form element
+      const form = document.querySelector('form');
+  
+      // Add submit event listener to the form
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting and page refresh
+  
+        // Get the input values of username and password
+        const usernameInput = document.querySelector('#username').value;
+        const passwordInput = document.querySelector('#password').value;
+  
+        // Get the login status element
+        const loginStatus = document.querySelector('#loginStatus');
+  
+        // Check if the username and password are correct
+        if (usernameInput === 'correctUsername' && passwordInput === 'correctPassword' || true) {
+          // Login successful
+          loginStatus.textContent = 'Login successful!';
+          loginStatus.style.color = 'green';
+          // You can perform additional actions here, such as redirecting to a new page
+          window.location.href = 'roullette.html';
+        } else {
+          // Login failed
+          loginStatus.textContent = 'Invalid username or password.';
+          loginStatus.style.color = 'red';
+          // You can perform additional actions here, such as clearing the input fields
+        }
+      });
+    </script>
+</body>
+  
+  
+</html>

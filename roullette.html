@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>12x3 Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 0px;
+        }
+
+        .grid-item {
+            background-color: #e5e5e5;
+            padding: 0px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .grid-item:hover {
+            background-color: lightgrey;
+        }
+
+        .grid-item.active {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Row 1 -->
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+
+        <!-- Row 2 -->
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+
+        <!-- Row 3 -->
+        <div class="grid-item">13</div>
+        <div class="grid-item">14</div>
+        <div class="grid-item">15</div>
+        <div class="grid-item">16</div>
+        <div class="grid-item">17</div>
+        <div class="grid-item">18</div>
+    </div>
+
+    <script>
+        // Add event listeners to grid items
+        const gridItems = document.querySelectorAll('.grid-item');
+        gridItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

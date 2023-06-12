@@ -1,0 +1,83 @@
+.table-cloth {
+    width: 600px;
+    height: 400px;
+    background-color: green;
+    border: 2px solid black;
+    position: relative;
+  }
+  
+  .table-cloth::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle closest-corner at 50% 50%, #fff 10%, #009933 100%);
+    opacity: 0.1;
+    z-index: 1;
+  }
+  
+  .table-cloth::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .table-cloth .number {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    z-index: 3;
+  }
+  
+  .table-cloth .number.red {
+    background-color: #ff0000;
+    color: #fff;
+  }
+  
+  .table-cloth .number.black {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .table-cloth .number.zero {
+    background-color: #00ff00;
+    color: #000;
+  }
+  
+  .table-cloth .number:nth-child(1) {
+    top: 20px;
+    left: 280px;
+  }
+  
+  .table-cloth .number:nth-child(2) {
+    top: 20px;
+    left: 320px;
+  }
+  
+  .table-cloth .number:nth-child(3) {
+    top: 60px;
+    left: 360px;
+  }
+  
+  /* ... Repeat the pattern for the rest of the numbers ... */
+  
+  .table-cloth .number:nth-child(36) {
+    top: 60px;
+    left: 240px;
+  }
+  
